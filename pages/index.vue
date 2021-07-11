@@ -50,7 +50,7 @@
             </div>
             <div class="card-footer">
               <small class="text-muted">{{ post.author }}</small> <br>
-              <!-- <small class="text-muted">{{ $moment(post.date).format('dddd, MMMM Do YYYY') }}</small> <br> -->
+              <small class="text-muted">{{ moment(post.date).format('dddd, MMMM Do YYYY') }}</small> <br>
               <!-- <small class="text-muted ml-4">{{ $moment(post.date).format('h:mm:ss a') }}</small> <br> -->
               <small class="text-muted type-tag">{{ post.og.site_name }} – {{ post.og.type }} </small>
             </div>
@@ -63,7 +63,7 @@
 
 <script>
 import posts from '~/static/siriuslabs-data.json'
-
+import moment from 'moment'
 
 export default {
   components: {
@@ -74,7 +74,8 @@ export default {
       posts:[],
       currentSort:'date',
       currentSortDir:'desc',
-      search: ''
+      search: '',
+      moment: moment
     }
   },
   asyncData ({ params }) {
