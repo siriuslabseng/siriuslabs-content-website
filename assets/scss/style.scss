@@ -1,22 +1,25 @@
-/*!
- * Project
- * Version: 1.0.0
- */
-@use "sass:color";
-// Bootstrap
-@import "bootstrap/scss/functions";
-@import "bootstrap/scss/variables";
-@import "bootstrap/scss/mixins";
-// Custom variables
-@import "variables";
-// Bootstrap
-@import "bootstrap/scss/bootstrap";
-@import "bootstrap-icons/font/bootstrap-icons.css";
-// Custom framework
-@import 'functions';
-@import 'mixins';
-@import 'components';
-@import 'colors';
-@import 'pages';
-@import "custom";
-@import "layout";
+// Load fonts.
+// @import "~styles/fonts/pt_sans";
+// @import "~styles/fonts/open_sans";
+
+// Load Bootstrap + bootstrap-vue.
+@import 'bootstrap-helpers';
+@import '~bootstrap/scss/bootstrap';
+
+// Load dependencies.
+// @import 'v-calendar/lib/v-calendar.min.css'; // .css imports don't need the `~` prefix.
+
+// Global Switex styling.
+// @import "custom-styles";
+
+// Sticky footer structure.
+//.app-container {
+//  position: relative;
+//  display: flex;
+//  min-height: 100vh;
+//  flex-direction: column;
+//}
+//
+//.switex-content {
+//  flex: 1;
+//}
